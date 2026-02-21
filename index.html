@@ -1,113 +1,297 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Nathan Kipkemboi | Software Engineer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nathan Kipkemboi — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-<header class="fade-in">
-    <div class="container">
-        <h1>Nathan Kipkemboi</h1>
-        <p class="subtitle">Software Engineer | Automation & Systems Architecture</p>
-        <p class="hero-text">
-            Delivering scalable automation frameworks, structured backend systems,
-            and quality-driven software architecture for modern digital environments.
-        </p>
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-logo">NK<span class="dot">.</span></span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle">&#9776;</button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#skills" onclick="closeMobile()">Skills</a>
+    <a href="#projects" onclick="closeMobile()">Projects</a>
+    <a href="#experience" onclick="closeMobile()">Experience</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="hero-tag reveal">Software Test Automation Engineer</div>
+      <h1 class="hero-name reveal delay-1">Nathan<br/><em>Kipkemboi</em></h1>
+      <p class="hero-sub reveal delay-2">Python · TypeScript · Playwright · Selenium · API Testing</p>
+      <div class="hero-cta reveal delay-3">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
     </div>
-</header>
-
-<section class="fade-in delay-1">
-    <div class="container">
-        <h2>About</h2>
-        <p>
-            Software Engineer specializing in automation engineering, backend systems,
-            and structured application design. My work emphasizes maintainability,
-            performance, and long-term scalability through disciplined engineering practices.
-        </p>
+    <div class="hero-badge reveal delay-4">
+      <span>BBIT</span>
+      <span>Final Year</span>
     </div>
-</section>
+  </section>
 
-<section class="fade-in delay-2">
-    <div class="container">
-        <h2>Featured Work</h2>
-
-        <div class="project-card" onclick="openModal('modal1')">
-            <h3>Unified Test Automation Framework</h3>
-            <p>Scalable cross-platform automation architecture.</p>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-label">01 — About</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Bridging <em>business logic</em><br/>with robust automation</h2>
+        <p>I am a final-year Bachelor of Business Information Technology (BBIT) student with strong expertise in software test automation, backend systems, and database design.</p>
+        <p>I specialize in designing structured, scalable test frameworks that bridge business requirements and technical implementation — spanning E2E automation, API validation, and system architecture modeling.</p>
+        <p>I aim to contribute to organizations that value efficiency, innovation, and structured problem-solving in digital environments.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-stat">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">Automation Projects</span>
         </div>
-
-        <div class="project-card" onclick="openModal('modal2')">
-            <h3>Smart Stadium Management System</h3>
-            <p>BBIT Capstone – Full system architecture & modeling.</p>
+        <div class="about-stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Testing Frameworks</span>
         </div>
-
-        <div class="project-card" onclick="openModal('modal3')">
-            <h3>Android Academic Management App</h3>
-            <p>Secure Firebase-integrated mobile system.</p>
+        <div class="about-stat">
+          <span class="stat-num">2</span>
+          <span class="stat-label">Platforms Supported</span>
         </div>
-
-    </div>
-</section>
-
-<section class="fade-in delay-3">
-    <div class="container">
-        <h2>Technical Stack</h2>
-        <div class="tech-grid">
-            <span>Java</span><span>Python</span><span>TypeScript</span>
-            <span>Selenium</span><span>Playwright</span><span>PostgreSQL</span>
-            <span>Firebase</span><span>SQL</span><span>REST APIs</span>
+        <div class="about-stat">
+          <span class="stat-num">∞</span>
+          <span class="stat-label">Drive to Build</span>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<footer>
-    <div class="container">
-        <p>Contact: nathanrowly@gmail.com | Nairobi, Kenya</p>
-        <p>&copy; 2026 Nathan Kipkemboi</p>
+  <!-- SKILLS -->
+  <section class="section dark-section" id="skills">
+    <div class="section-label light">02 — Skills</div>
+    <h2 class="section-title light">Technical <em>Arsenal</em></h2>
+    <div class="skills-container">
+
+      <div class="skill-group">
+        <div class="skill-group-title">Automation & Testing</div>
+        <div class="skill-tags">
+          <span>End-to-End Testing (E2E)</span>
+          <span>API Testing (REST)</span>
+          <span>Unit Testing</span>
+          <span>Cross-Browser Testing</span>
+          <span>Cross-Platform (Win/Linux)</span>
+          <span>Test Framework Architecture</span>
+          <span>Page Object Model (POM)</span>
+          <span>Structured Reporting</span>
+          <span>Test Strategy Design</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Programming</div>
+        <div class="skill-tags">
+          <span class="highlight">Python</span>
+          <span class="highlight">TypeScript</span>
+          <span class="highlight">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Tools & Platforms</div>
+        <div class="skill-tags">
+          <span>Playwright</span>
+          <span>Selenium</span>
+          <span>Git</span>
+          <span>Firebase Studio</span>
+          <span>CI-Ready Structuring</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">System Design</div>
+        <div class="skill-tags">
+          <span>UML Activity Diagrams</span>
+          <span>ER Modeling</span>
+          <span>System Architecture Planning</span>
+        </div>
+      </div>
+
     </div>
-</footer>
+  </section>
 
-<!-- Modals -->
-<div id="modal1" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('modal1')">&times;</span>
-        <h3>Unified Test Automation Framework</h3>
-        <p>
-            Integrated Selenium, Playwright, and REST API testing into a unified architecture.
-            Enabled cross-platform execution (Windows & Linux), automated failure screenshots,
-            and trace debugging for root cause analysis. Designed scalable structure
-            to reduce duplication and ensure long-term maintainability.
-        </p>
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section-label">03 — Projects</div>
+    <h2 class="section-title">What I've <em>Built</em></h2>
+    <div class="projects-grid">
+
+      <div class="project-card featured">
+        <div class="project-num">01</div>
+        <div class="project-content">
+          <div class="project-stack">Python · Playwright · Selenium · REST APIs</div>
+          <h3>Unified Test Automation Framework</h3>
+          <p>Designed and implemented a structured automation framework integrating browser automation and API testing into a single maintainable architecture.</p>
+          <ul>
+            <li>Integrated Selenium, Playwright & API tests into one unified structure</li>
+            <li>Migrated project architecture to ESM for modern compatibility</li>
+            <li>Cross-platform compatibility across Windows & Linux</li>
+            <li>Automated screenshot capture on failures + trace debugging</li>
+            <li>Scalable folder structure with clean documentation (README with setup & execution guides)</li>
+          </ul>
+          <div class="project-impact">Reduced duplication · Improved maintainability · Scalable expansion</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-num">02</div>
+        <div class="project-content">
+          <div class="project-stack">TypeScript · Playwright</div>
+          <h3>E2E Browser Automation</h3>
+          <p>Built robust end-to-end test suites using modern automation best practices for reliable cross-browser testing.</p>
+          <ul>
+            <li>Locator strategy optimization & UI assertions</li>
+            <li>Page Object Model architecture</li>
+            <li>Headless & headed execution with Codegen-assisted creation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-num">03</div>
+        <div class="project-content">
+          <div class="project-stack">TypeScript</div>
+          <h3>Dashboard Unit Testing — Confomap</h3>
+          <p>Developed structured unit tests for dashboard components ensuring stable and predictable UI behavior.</p>
+          <ul>
+            <li>Component-level coverage with mocked external dependencies</li>
+            <li>Edge case validation & coverage reporting</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-num">04</div>
+        <div class="project-content">
+          <div class="project-stack">REST API</div>
+          <h3>API Testing Architecture</h3>
+          <p>Designed and implemented comprehensive REST API validation workflows integrated into the unified framework.</p>
+          <ul>
+            <li>Status code, schema & response body assertions</li>
+            <li>Negative case testing for edge scenarios</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-num">05</div>
+        <div class="project-content">
+          <div class="project-stack">ER Modeling · UML</div>
+          <h3>System Design & Modeling</h3>
+          <p>Delivered structured system analysis across multiple domains demonstrating object-oriented design thinking.</p>
+          <ul>
+            <li>ER Modeling — SwiftRide Transport (entities, relationships & cardinalities)</li>
+            <li>UML Activity Diagrams — Hospital Patient Registration</li>
+            <li>UML Activity Diagrams — E-Commerce Order Fulfillment</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
-</div>
+  </section>
 
-<div id="modal2" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('modal2')">&times;</span>
-        <h3>Smart Stadium Management System</h3>
-        <p>
-            Designed and presented complete system architecture including ERD modeling,
-            behavioral diagrams, requirements engineering, and feasibility analysis.
-            Structured for large-scale venue digitization implementation.
-        </p>
+  <!-- EXPERIENCE -->
+  <section class="section dark-section" id="experience">
+    <div class="section-label light">04 — Experience</div>
+    <h2 class="section-title light">Education &amp; <em>Experience</em></h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-tag">Internship</div>
+          <h3>Software Testing & Automation Engineer</h3>
+          <div class="timeline-company">The Tech Bands Originals</div>
+          <ul>
+            <li>Framework refactoring and architecture overhaul</li>
+            <li>Multi-environment compatibility (Windows & Linux)</li>
+            <li>Unified automation architecture design</li>
+            <li>Documentation & maintainability improvements</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-tag">Education</div>
+          <h3>Bachelor of Business Information Technology (BBIT)</h3>
+          <div class="timeline-company">Final Year Student</div>
+          <p>Coursework spanning software engineering, database systems, business analysis, mobile development, and information systems.</p>
+        </div>
+      </div>
+
     </div>
-</div>
+  </section>
 
-<div id="modal3" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('modal3')">&times;</span>
-        <h3>Android Academic Management App</h3>
-        <p>
-            Developed secure Android application using Firebase Authentication with login,
-            device management, and structured dashboard navigation for academic operations.
-        </p>
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="section-label">05 — Contact</div>
+    <h2 class="section-title">Let's <em>Connect</em></h2>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:nathanrowly@gmail.com">
+        <div class="contact-icon">✉</div>
+        <div class="contact-info">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">nathanrowly@gmail.com</span>
+        </div>
+      </a>
+      <a class="contact-card" href="tel:+254741099239">
+        <div class="contact-icon">📞</div>
+        <div class="contact-info">
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">+254 741 099 239</span>
+        </div>
+      </a>
+      <a class="contact-card" href="https://linkedin.com/in/nathan-kipkemboi" target="_blank">
+        <div class="contact-icon">💼</div>
+        <div class="contact-info">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">Nathan Kipkemboi</span>
+        </div>
+      </a>
+      <a class="contact-card" href="#" target="_blank">
+        <div class="contact-icon">🐙</div>
+        <div class="contact-info">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">Add your GitHub link</span>
+        </div>
+      </a>
     </div>
-</div>
+  </section>
 
-<script src="script.js"></script>
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2025 Nathan Kipkemboi</span>
+    <span>Software Test Automation Engineer</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
