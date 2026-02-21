@@ -9,78 +9,58 @@
 </head>
 <body>
 
-<header>
+<header class="fade-in">
     <div class="container">
         <h1>Nathan Kipkemboi</h1>
-        <p class="subtitle">Software Engineer | Automation & Systems Design</p>
+        <p class="subtitle">Software Engineer | Automation & Systems Architecture</p>
         <p class="hero-text">
-            Building scalable, quality-driven software systems with expertise in automation frameworks,
-            backend logic, and structured architecture design.
+            Delivering scalable automation frameworks, structured backend systems,
+            and quality-driven software architecture for modern digital environments.
         </p>
     </div>
 </header>
 
-<section>
+<section class="fade-in delay-1">
     <div class="container">
         <h2>About</h2>
         <p>
-            I specialize in test automation engineering, backend systems, and scalable application architecture.
-            My work focuses on maintainable automation frameworks, secure mobile applications, and structured
-            system modeling grounded in strong software engineering principles.
+            Software Engineer specializing in automation engineering, backend systems,
+            and structured application design. My work emphasizes maintainability,
+            performance, and long-term scalability through disciplined engineering practices.
         </p>
     </div>
 </section>
 
-<section>
-    <div class="container">
-        <h2>Core Expertise</h2>
-        <ul>
-            <li>Automation Engineering (Selenium, Playwright, REST APIs)</li>
-            <li>Backend Development (Java, Python, TypeScript)</li>
-            <li>System Architecture & Database Design</li>
-            <li>End-to-End & Unit Testing</li>
-        </ul>
-    </div>
-</section>
-
-<section>
+<section class="fade-in delay-2">
     <div class="container">
         <h2>Featured Work</h2>
 
-        <div class="project">
+        <div class="project-card" onclick="openModal('modal1')">
             <h3>Unified Test Automation Framework</h3>
-            <p>
-                Designed and implemented a scalable framework integrating Selenium, Playwright,
-                and REST API testing. Enabled cross-platform execution and automated failure logging
-                with trace debugging for root-cause analysis.
-            </p>
+            <p>Scalable cross-platform automation architecture.</p>
         </div>
 
-        <div class="project">
-            <h3>Smart Stadium Management System (BBIT Capstone)</h3>
-            <p>
-                Designed and presented a structured stadium digitization system including ERD modeling,
-                behavioral diagrams, requirement documentation, and feasibility analysis.
-            </p>
+        <div class="project-card" onclick="openModal('modal2')">
+            <h3>Smart Stadium Management System</h3>
+            <p>BBIT Capstone – Full system architecture & modeling.</p>
         </div>
 
-        <div class="project">
-            <h3>Android Academic Management Application</h3>
-            <p>
-                Built secure Android application using Firebase Authentication with login,
-                device tracking, 2FA management, and structured dashboard architecture.
-            </p>
+        <div class="project-card" onclick="openModal('modal3')">
+            <h3>Android Academic Management App</h3>
+            <p>Secure Firebase-integrated mobile system.</p>
         </div>
 
     </div>
 </section>
 
-<section>
+<section class="fade-in delay-3">
     <div class="container">
-        <h2>Tech Stack</h2>
-        <p>
-            Java | Python | TypeScript | SQL | Selenium | Playwright | PostgreSQL | Firebase | Android Studio
-        </p>
+        <h2>Technical Stack</h2>
+        <div class="tech-grid">
+            <span>Java</span><span>Python</span><span>TypeScript</span>
+            <span>Selenium</span><span>Playwright</span><span>PostgreSQL</span>
+            <span>Firebase</span><span>SQL</span><span>REST APIs</span>
+        </div>
     </div>
 </section>
 
@@ -91,5 +71,43 @@
     </div>
 </footer>
 
+<!-- Modals -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h3>Unified Test Automation Framework</h3>
+        <p>
+            Integrated Selenium, Playwright, and REST API testing into a unified architecture.
+            Enabled cross-platform execution (Windows & Linux), automated failure screenshots,
+            and trace debugging for root cause analysis. Designed scalable structure
+            to reduce duplication and ensure long-term maintainability.
+        </p>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h3>Smart Stadium Management System</h3>
+        <p>
+            Designed and presented complete system architecture including ERD modeling,
+            behavioral diagrams, requirements engineering, and feasibility analysis.
+            Structured for large-scale venue digitization implementation.
+        </p>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <h3>Android Academic Management App</h3>
+        <p>
+            Developed secure Android application using Firebase Authentication with login,
+            device management, and structured dashboard navigation for academic operations.
+        </p>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
