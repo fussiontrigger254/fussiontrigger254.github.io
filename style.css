@@ -150,16 +150,19 @@ nav {
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
-}
-
-.hero-photo {
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: center top;
+  overflow: hidden;
   border: 4px solid var(--cyan);
   box-shadow: 0 0 60px rgba(0, 194, 255, 0.25);
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
