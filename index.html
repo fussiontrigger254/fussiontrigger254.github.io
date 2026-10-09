@@ -2,322 +2,1004 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nathan Kipkemboi — Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Nathan Kipkemboi — Business Information Technology graduate specializing in QA Automation, Full-Stack Development, API Testing and IT Business Systems."
+  />
+
+  <meta name="author" content="Nathan Kipkemboi" />
+
+  <title>Nathan Kipkemboi | QA Automation & Full-Stack Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
 </head>
+
 <body>
 
-  <!-- NOISE OVERLAY -->
-  <div class="noise"></div>
+  <!-- Noise overlay -->
+  <div class="noise" aria-hidden="true"></div>
 
-  <!-- NAV -->
-  <nav>
-    <span class="nav-logo">NK<span class="dot">.</span></span>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="menu-toggle" id="menuToggle">&#9776;</button>
-  </nav>
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+  <header>
+    <nav class="navbar" id="navbar">
 
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#about" onclick="closeMobile()">About</a>
-    <a href="#skills" onclick="closeMobile()">Skills</a>
-    <a href="#projects" onclick="closeMobile()">Projects</a>
-    <a href="#experience" onclick="closeMobile()">Experience</a>
-    <a href="#contact" onclick="closeMobile()">Contact</a>
-  </div>
+      <a href="#home" class="nav-logo" aria-label="Nathan Kipkemboi home">
+        NK<span>.</span>
+      </a>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-content">
-      <div class="hero-tag reveal">Software testing and  Automation engineer</div>
-      <h1 class="hero-name reveal delay-1">Nathan<br/><em>Kipkemboi</em></h1>
-      <p class="hero-sub reveal delay-2">Python · TypeScript · Playwright · Selenium · API Testing</p>
-      <div class="hero-cta reveal delay-3">
-        <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="#contact" class="btn-ghost">Get in Touch</a>
-      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        ☰
+      </button>
+
+    </nav>
+
+    <!-- Mobile navigation -->
+    <div class="mobile-menu" id="mobileMenu">
+
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+
     </div>
-    <div class="hero-portrait reveal delay-4">
-       <img src="assets/images/me.JPG" alt="Nathan Kipkemboi" class="hero-photo"/>
-    </div>
+  </header>
 
-    <div class="hero-badge">
-      <span>BBIT</span>
-      <span>Final Year</span>
-    </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="section-label">About</div>
-    <div class="about-grid">
-      <div class="about-text">
-        <h2>Bridging <em>business logic</em><br/>with robust automation</h2>
-        <p>I am a final-year Bachelor of Business Information Technology (BBIT) student with strong expertise in software test automation, backend systems, and database design.</p>
-        <p>I specialize in designing structured, scalable test frameworks that bridge business requirements and technical implementation — spanning E2E automation, API validation, and system architecture modeling.</p>
-        <p>I aim to contribute to organizations that value efficiency, innovation, and structured problem-solving in digital environments.</p>
-      </div>
-      <div class="about-card">
-        <div class="about-stat">
-          <span class="stat-num">7+</span>
-          <span class="stat-label">Automation Projects</span>
-        </div>
-        <div class="about-stat">
-          <span class="stat-num">4+</span>
-          <span class="stat-label">Testing Frameworks</span>
-        </div>
-        <div class="about-stat">
-          <span class="stat-num">3</span>
-          <span class="stat-label">Platforms Supported</span>
-        </div>
-        <div class="about-stat">
-          <span class="stat-num">∞</span>
-          <span class="stat-label">Drive to Build</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- =========================
+       HERO
+  ========================== -->
+  <main id="home">
 
-  <!-- SKILLS -->
-  <section class="section dark-section" id="skills">
-    <div class="section-label light">Skills</div>
-    <h2 class="section-title light">Technical <em>Arsenal</em></h2>
-    <div class="skills-container">
+    <section class="hero">
 
-      <div class="skill-group">
-        <div class="skill-group-title">Automation & Testing</div>
-        <div class="skill-tags">
-          <span>End-to-End Testing (E2E)</span>
-          <span>API Testing (REST)</span>
-          <span>Unit Testing</span>
-          <span>Cross-Browser Testing</span>
-          <span>Cross-Platform (Win/Linux)</span>
-          <span>Test Framework Architecture</span>
-          <span>Page Object Model (POM)</span>
-          <span>Structured Reporting</span>
-          <span>Test Strategy Design</span>
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="hero-content">
+
+        <div class="hero-tag reveal">
+          QA Automation · Full-Stack · IT Systems
         </div>
-      </div>
 
-      <div class="skill-group">
-        <div class="skill-group-title">Programming</div>
-        <div class="skill-tags">
-          <span class="highlight">Python</span>
-          <span class="highlight">TypeScript</span>
-          <span class="highlight">JavaScript</span>
-          <span class="highlight">HTML/CSS</span>
-          <span class="highlight">SQL/PostgreSQL</span>                                 
-        </div>
-      </div>
+        <h1 class="hero-name reveal delay-1">
+          Nathan<br />
+          <em>Kipkemboi</em>
+        </h1>
 
-      <div class="skill-group">
-        <div class="skill-group-title">Tools & Platforms</div>
-        <div class="skill-tags">
+        <p class="hero-description reveal delay-2">
+          Business Information Technology graduate building reliable software,
+          automated test systems, APIs and practical digital solutions.
+        </p>
+
+        <div class="hero-stack reveal delay-2">
+          <span>Python</span>
+          <span>TypeScript</span>
           <span>Playwright</span>
           <span>Selenium</span>
-          <span>Git</span>
-          <span>Firebase</span>
-          <span>CI-CD tools</span>
-          <span>Android Studio</span>
-          <span>IDEs: Vs Code, IntelliJ IDEA, eclipse, PyCharm</span>
+          <span>Django</span>
+          <span>PostgreSQL</span>
         </div>
+
+        <div class="hero-cta reveal delay-3">
+
+          <a href="#projects" class="btn btn-primary">
+            View Projects
+          </a>
+
+          <a href="#contact" class="btn btn-ghost">
+            Get in Touch
+          </a>
+
+        </div>
+
       </div>
 
-      <div class="skill-group">
-        <div class="skill-group-title">System Design</div>
-        <div class="skill-tags">
-          <span>Behavioral & Process Modeling</span>
-          <span>ER Modeling</span>
-          <span>System Architecture Planning</span>
-          <span>Scalable Folder & Project Structuring</span>
-        </div>
+
+      <!-- Portrait -->
+      <div class="hero-portrait reveal delay-4">
+
+        <img
+          src="assets/images/me.JPG"
+          alt="Nathan Kipkemboi"
+          class="hero-photo"
+        />
+
       </div>
 
-    </div>
-  </section>
 
-  <!-- PROJECTS -->
-  <section class="section" id="projects">
-    <div class="section-label">Projects</div>
-    <h2 class="section-title">What I've <em>Built</em></h2>
-    <div class="projects-grid">
+      <!-- Small status card -->
+      <div class="hero-status">
 
-      <div class="project-card featured">
-        <div class="project-num">01</div>
-        <div class="project-content">
-          <div class="project-stack">Python · Playwright · Selenium · REST APIs</div>
-          <h3>Unified Test Automation Framework</h3>
-          <p>Designed and implemented a structured automation framework integrating browser automation and API testing into a single maintainable architecture.</p>
-          <ul>
-            <li>Integrated Selenium, Playwright & API tests into one unified structure</li>
-            <li>Migrated project architecture to ESM for modern compatibility</li>
-            <li>Cross-platform compatibility across Windows & Linux</li>
-            <li>Automated screenshot capture on failures + trace debugging</li>
-            <li>Scalable folder structure with clean documentation (README with setup & execution guides)</li>
-          </ul>
-          <div class="project-impact">Reduced duplication · Improved maintainability · Scalable expansion</div>
+        <span class="status-dot"></span>
+
+        <div>
+          <strong>Open to opportunities</strong>
+          <small>QA · Software · IT Systems</small>
         </div>
+
       </div>
 
-      <div class="project-card">
-        <div class="project-num">02</div>
-        <div class="project-content">
-          <div class="project-stack">TypeScript · Playwright</div>
-          <h3>E2E Browser Automation</h3>
-          <p>Built robust end-to-end test suites using modern automation best practices for reliable cross-browser testing.</p>
-          <ul>
-            <li>Locator strategy optimization & UI assertions</li>
-            <li>Page Object Model architecture</li>
-            <li>Headless & headed execution with Codegen-assisted creation</li>
-          </ul>
-        </div>
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="section" id="about">
+
+      <div class="section-label">
+        01 — About
       </div>
 
-      <div class="project-card">
-        <div class="project-num">03</div>
-        <div class="project-content">
-          <div class="project-stack">TypeScript</div>
-          <h3>Dashboard Unit Testing</h3>
-          <p>Developed structured unit tests for dashboard components ensuring stable and predictable UI behavior.</p>
-          <ul>
-            <li>Component-level coverage with mocked external dependencies</li>
-            <li>Edge case validation & coverage reporting</li>
-            <li>integration readiness of dashboard components and backend service interaction</li>
-          </ul>
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <h2>
+            Bridging
+            <em>business logic</em>
+            with technology.
+          </h2>
+
+          <p>
+            I am a Business Information Technology graduate with practical
+            experience in software testing, test automation, backend
+            development and system design.
+          </p>
+
+          <p>
+            My work sits at the intersection of business requirements and
+            technical implementation — from understanding how a system should
+            work, to building APIs and databases, and then validating that the
+            final product behaves reliably.
+          </p>
+
+          <p>
+            I enjoy solving structured problems, improving software quality and
+            building practical systems that address real-world business needs.
+          </p>
+
+          <div class="about-actions">
+
+            <!-- Replace with your real CV URL -->
+            <a href="#" class="text-link">
+              Download CV →
+            </a>
+
+            <!-- Replace with your real GitHub URL -->
+            <a
+              href="https://github.com/fussiontrigger254"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link"
+            >
+              GitHub →
+            </a>
+
+          </div>
+
         </div>
+
+
+        <div class="about-card">
+
+          <div class="about-stat">
+            <span class="stat-num">QA</span>
+            <span class="stat-label">Automation</span>
+          </div>
+
+          <div class="about-stat">
+            <span class="stat-num">API</span>
+            <span class="stat-label">Testing & Development</span>
+          </div>
+
+          <div class="about-stat">
+            <span class="stat-num">BBIT</span>
+            <span class="stat-label">Business + Technology</span>
+          </div>
+
+          <div class="about-stat">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Drive to Build</span>
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="project-card">
-        <div class="project-num">04</div>
-        <div class="project-content">
-          <div class="project-stack">REST API</div>
-          <h3>API Testing Architecture</h3>
-          <p>Designed and implemented comprehensive REST API validation workflows integrated into the unified framework.</p>
-          <ul>
-            <li>Status code, schema & response body assertions</li>
-            <li>Negative case testing for edge scenarios</li>
-          </ul>
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section class="dark-section" id="skills">
+
+      <div class="section-inner">
+
+        <div class="section-label light">
+          02 — Skills
         </div>
+
+        <h2 class="section-title light">
+          Technical <em>Toolkit</em>
+        </h2>
+
+
+        <div class="skills-container">
+
+          <!-- Testing -->
+          <div class="skill-group">
+
+            <div class="skill-group-title">
+              QA & Automation
+            </div>
+
+            <div class="skill-tags">
+
+              <span class="highlight">Playwright</span>
+              <span class="highlight">Selenium</span>
+              <span>End-to-End Testing</span>
+              <span>REST API Testing</span>
+              <span>Unit Testing</span>
+              <span>Regression Testing</span>
+              <span>Cross-Browser Testing</span>
+              <span>Page Object Model</span>
+              <span>Test Framework Architecture</span>
+              <span>Failure Diagnostics</span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Development -->
+          <div class="skill-group">
+
+            <div class="skill-group-title">
+              Development
+            </div>
+
+            <div class="skill-tags">
+
+              <span class="highlight">Python</span>
+              <span class="highlight">TypeScript</span>
+              <span class="highlight">JavaScript</span>
+              <span>Django</span>
+              <span>Django REST Framework</span>
+              <span>HTML / CSS</span>
+              <span>REST APIs</span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Data & Infrastructure -->
+          <div class="skill-group">
+
+            <div class="skill-group-title">
+              Data & Infrastructure
+            </div>
+
+            <div class="skill-tags">
+
+              <span class="highlight">PostgreSQL</span>
+              <span>SQL</span>
+              <span>Git / GitHub</span>
+              <span>Docker</span>
+              <span>Redis</span>
+              <span>Celery</span>
+              <span>Firebase</span>
+              <span>CI/CD</span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Systems -->
+          <div class="skill-group">
+
+            <div class="skill-group-title">
+              IT & Business Systems
+            </div>
+
+            <div class="skill-tags">
+
+              <span>Systems Analysis</span>
+              <span>SDLC</span>
+              <span>Requirements Analysis</span>
+              <span>UAT</span>
+              <span>Business Process Modeling</span>
+              <span>ER Modeling</span>
+              <span>UML</span>
+              <span>System Architecture</span>
+              <span>Technical Documentation</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="project-card">
-        <div class="project-num">05</div>
-        <div class="project-content">
-          <div class="project-stack">ER Modeling · UML</div>
-          <h3>System Design & Modeling</h3>
-          <p>Delivered structured system analysis across multiple domains demonstrating object-oriented design thinking.</p>
-          <ul>
-            <li>ER Modeling – designed relational database structures for complex systems.</li>
-            <li>UML Diagrams – created use case, sequence, activity, and class diagrams.</li>
-            <li>System Architecture – planned scalable, maintainable system structures.</li>
-            <li>Process & Workflow Modeling – visualized user interactions and system workflows.</li>
-            <li>Project Structuring & Documentation – organized folders and documentation for maintainability.</li>
-          </ul>
-        </div>
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section class="section" id="projects">
+
+      <div class="section-label">
+        03 — Projects
       </div>
 
-    </div>
-  </section>
+      <h2 class="section-title">
+        What I've <em>Built</em>
+      </h2>
 
-  <!-- EXPERIENCE -->
-  <section class="section dark-section" id="experience">
-    <div class="section-label light">Experience</div>
-    <h2 class="section-title light">Education &amp; <em>Experience</em></h2>
-    <div class="timeline">
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-body">
-          <div class="timeline-tag">Internship</div>
-          <h3>Software Testing & Automation Engineer</h3>
-          <div class="timeline-company">The Tech Band Originals Nairobi Kenya</div>
-          <ul>
+      <div class="projects-grid">
 
-           
-            <li>Led development of a Unified Test Automation Framework (Selenium, Playwright, REST APIs)</li>
 
-            <li>Architected scalable and maintainable test structure and framework</li>
+        <!-- =========================
+             PROJECT 01 — SFMS
+        ========================== -->
 
-            <li>Built E2E automation suites using Playwright (TypeScript, POM architecture)</li>
+        <article class="project-card featured">
 
-            <li>Implemented structured unit testing for dashboard logic</li>
+          <div class="project-num">
+            01
+          </div>
 
-            <li>Enabled cross-platform execution (Windows & Linux)</li>
+          <div class="project-content">
 
-            <li>Automated failure diagnostics (screenshots + trace debugging)</li>
+            <div class="project-top">
 
-            <li>Contributed to CI/CD test integration</li>
-            
-            <li>Documentation & maintainability improvements</li>
-          </ul>
-          
-        </div>
+              <div class="project-stack">
+                Django · DRF · PostgreSQL · Docker · Firebase
+              </div>
+
+              <span class="project-badge">
+                Featured
+              </span>
+
+            </div>
+
+            <h3>
+              SFMS Kenya — Farm Management System
+            </h3>
+
+            <p>
+              A full-stack farm management platform designed to bring
+              operational, financial and farm-record management into one
+              digital system.
+            </p>
+
+            <ul>
+
+              <li>
+                Built backend services using Django and Django REST Framework.
+              </li>
+
+              <li>
+                Designed relational data models using PostgreSQL.
+              </li>
+
+              <li>
+                Implemented farm, crop, livestock, notification, community
+                and financial management modules.
+              </li>
+
+              <li>
+                Integrated Firebase authentication with API-based workflows.
+              </li>
+
+              <li>
+                Used Docker, Redis and Celery for application infrastructure
+                and background processing.
+              </li>
+
+              <li>
+                Integrated external services including weather and SMS
+                functionality.
+              </li>
+
+              <li>
+                Built and verified frontend-to-backend API workflows.
+              </li>
+
+            </ul>
+
+            <div class="project-impact">
+              Full-stack application · REST APIs · Database design ·
+              Authentication · Business workflows
+            </div>
+
+
+            <div class="project-links">
+
+              <!-- Replace these -->
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                Live Demo ↗
+              </a>
+
+              <a
+                href="https://github.com/fussiontrigger254"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- =========================
+             PROJECT 02
+        ========================== -->
+
+        <article class="project-card">
+
+          <div class="project-num">
+            02
+          </div>
+
+          <div class="project-content">
+
+            <div class="project-stack">
+              Playwright · Selenium · REST API
+            </div>
+
+            <h3>
+              Unified Test Automation Framework
+            </h3>
+
+            <p>
+              A structured automation framework bringing browser and API
+              testing into a maintainable testing architecture.
+            </p>
+
+            <ul>
+
+              <li>
+                Integrated Selenium, Playwright and API tests.
+              </li>
+
+              <li>
+                Applied scalable project and folder architecture.
+              </li>
+
+              <li>
+                Migrated project architecture to ESM.
+              </li>
+
+              <li>
+                Added screenshot capture and trace-based debugging.
+              </li>
+
+              <li>
+                Supported Windows and Linux execution.
+              </li>
+
+              <li>
+                Documented setup and execution workflows.
+              </li>
+
+            </ul>
+
+            <div class="project-impact">
+              Maintainability · Reusability · Cross-platform testing
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- =========================
+             PROJECT 03
+        ========================== -->
+
+        <article class="project-card">
+
+          <div class="project-num">
+            03
+          </div>
+
+          <div class="project-content">
+
+            <div class="project-stack">
+              TypeScript · Playwright · POM
+            </div>
+
+            <h3>
+              E2E Browser Automation
+            </h3>
+
+            <p>
+              End-to-end browser automation focused on reliable UI validation
+              and maintainable test design.
+            </p>
+
+            <ul>
+
+              <li>
+                Implemented Page Object Model architecture.
+              </li>
+
+              <li>
+                Developed UI assertions and locator strategies.
+              </li>
+
+              <li>
+                Executed headed and headless test workflows.
+              </li>
+
+              <li>
+                Performed cross-browser validation.
+              </li>
+
+            </ul>
+
+          </div>
+
+        </article>
+
+
+        <!-- =========================
+             PROJECT 04
+        ========================== -->
+
+        <article class="project-card">
+
+          <div class="project-num">
+            04
+          </div>
+
+          <div class="project-content">
+
+            <div class="project-stack">
+              REST APIs · Testing
+            </div>
+
+            <h3>
+              API Testing Architecture
+            </h3>
+
+            <p>
+              REST API validation workflows designed to verify service
+              behavior, responses and negative scenarios.
+            </p>
+
+            <ul>
+
+              <li>
+                Status code validation.
+              </li>
+
+              <li>
+                Response body assertions.
+              </li>
+
+              <li>
+                Schema validation.
+              </li>
+
+              <li>
+                Negative and edge-case testing.
+              </li>
+
+            </ul>
+
+          </div>
+
+        </article>
+
+
+        <!-- =========================
+             PROJECT 05
+        ========================== -->
+
+        <article class="project-card">
+
+          <div class="project-num">
+            05
+          </div>
+
+          <div class="project-content">
+
+            <div class="project-stack">
+              Information Security · Python
+            </div>
+
+            <h3>
+              Browser Privacy-Wipe Tool
+            </h3>
+
+            <p>
+              A security-focused utility designed around browser privacy and
+              local data-cleaning workflows.
+            </p>
+
+            <ul>
+
+              <li>
+                Automated browser privacy-cleaning operations.
+              </li>
+
+              <li>
+                Applied scripting to repetitive security tasks.
+              </li>
+
+              <li>
+                Documented the system workflow and implementation.
+              </li>
+
+            </ul>
+
+          </div>
+
+        </article>
+
+
+        <!-- =========================
+             PROJECT 06
+        ========================== -->
+
+        <article class="project-card">
+
+          <div class="project-num">
+            06
+          </div>
+
+          <div class="project-content">
+
+            <div class="project-stack">
+              Digital Forensics · Documentation
+            </div>
+
+            <h3>
+              Digital Forensics Evidence Logger
+            </h3>
+
+            <p>
+              A structured evidence-management project focused on recording
+              and organizing digital forensic information.
+            </p>
+
+            <ul>
+
+              <li>
+                Structured evidence-recording workflows.
+              </li>
+
+              <li>
+                Applied information-security concepts.
+              </li>
+
+              <li>
+                Produced supporting technical documentation.
+              </li>
+
+            </ul>
+
+          </div>
+
+        </article>
+
+
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-body">
-          <div class="timeline-tag">Education</div>
-          <h3>Bachelor of Business Information Technology (BBIT)</h3>
-          <div class="timeline-company">Final Year Student</div>
-          <p>Coursework spanning software engineering, database systems, business analysis, mobile development, and information systems.</p>
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================== -->
+
+    <section class="dark-section" id="experience">
+
+      <div class="section-inner">
+
+        <div class="section-label light">
+          04 — Experience
         </div>
+
+        <h2 class="section-title light">
+          Experience & <em>Education</em>
+        </h2>
+
+
+        <div class="timeline">
+
+
+          <!-- Internship -->
+
+          <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-body">
+
+              <div class="timeline-tag">
+                Software Testing Internship
+              </div>
+
+              <h3>
+                Software Testing & Automation
+              </h3>
+
+              <div class="timeline-company">
+                The Tech Band Originals · Nairobi, Kenya
+              </div>
+
+              <ul>
+
+                <li>
+                  Worked on automated testing using Selenium, Playwright
+                  and REST API testing.
+                </li>
+
+                <li>
+                  Built and maintained structured test automation workflows.
+                </li>
+
+                <li>
+                  Developed Playwright E2E tests using TypeScript and
+                  Page Object Model architecture.
+                </li>
+
+                <li>
+                  Worked on dashboard unit testing and service interaction
+                  validation.
+                </li>
+
+                <li>
+                  Implemented screenshot and trace-based failure diagnostics.
+                </li>
+
+                <li>
+                  Supported cross-platform execution on Windows and Linux.
+                </li>
+
+                <li>
+                  Contributed to documentation and CI/CD test integration.
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+
+          <!-- Education -->
+
+          <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-body">
+
+              <div class="timeline-tag">
+                Education
+              </div>
+
+              <h3>
+                Bachelor of Business Information Technology
+              </h3>
+
+              <div class="timeline-company">
+                Riara University · Second Class Upper
+              </div>
+
+              <p>
+                Academic training combining information technology,
+                software engineering, databases, systems analysis,
+                business processes, information security and
+                technology-driven business solutions.
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
       </div>
 
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="section-label">05 — Contact</div>
-    <h2 class="section-title">Let's <em>Connect</em></h2>
-    <div class="contact-grid">
-      <a class="contact-card" href="mailto:nathanrowly@gmail.com">
-        <div class="contact-icon">✉</div>
-        <div class="contact-info">
-          <span class="contact-label">Email</span>
-          <span class="contact-value">nathanrowly@gmail.com</span>
-        </div>
-      </a>
-      <a class="contact-card" href="tel:+254741099239">
-        <div class="contact-icon">📞</div>
-        <div class="contact-info">
-          <span class="contact-label">Phone</span>
-          <span class="contact-value">+254 741 099 239</span>
-        </div>
-      </a>
-      <a class="contact-card" href="https://linkedin.com/in/nathan-kipkemboi" target="_blank">
-        <div class="contact-icon">💼</div>
-        <div class="contact-info">
-          <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">Nathan Kipkemboi</span>
-        </div>
-      </a>
-      <a class="contact-card" href="#" target="_blank">
-        <div class="contact-icon">🐙</div>
-        <div class="contact-info">
-          <span class="contact-label">GitHub</span>
-          <span class="contact-value">https://github.com/fussiontrigger254</span>
-        </div>
-      </a>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="section" id="contact">
+
+      <div class="section-label">
+        05 — Contact
+      </div>
+
+      <h2 class="section-title">
+        Let's <em>Connect</em>
+      </h2>
+
+      <p class="contact-intro">
+        I am interested in opportunities across QA automation, software
+        development, technical support and IT/business systems.
+      </p>
+
+
+      <div class="contact-grid">
+
+
+        <a
+          class="contact-card"
+          href="mailto:nathanrowly@gmail.com"
+        >
+
+          <div class="contact-icon">
+            ✉
+          </div>
+
+          <div class="contact-info">
+
+            <span class="contact-label">
+              Email
+            </span>
+
+            <span class="contact-value">
+              nathanrowly@gmail.com
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <a
+          class="contact-card"
+          href="tel:+254741099239"
+        >
+
+          <div class="contact-icon">
+            ☎
+          </div>
+
+          <div class="contact-info">
+
+            <span class="contact-label">
+              Phone
+            </span>
+
+            <span class="contact-value">
+              +254 741 099 239
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <a
+          class="contact-card"
+          href="https://linkedin.com/in/nathan-kipkemboi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <div class="contact-icon">
+            in
+          </div>
+
+          <div class="contact-info">
+
+            <span class="contact-label">
+              LinkedIn
+            </span>
+
+            <span class="contact-value">
+              Nathan Kipkemboi
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <a
+          class="contact-card"
+          href="https://github.com/fussiontrigger254"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <div class="contact-icon">
+            GH
+          </div>
+
+          <div class="contact-info">
+
+            <span class="contact-label">
+              GitHub
+            </span>
+
+            <span class="contact-value">
+              fussiontrigger254
+            </span>
+
+          </div>
+
+        </a>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer>
-    <span>© 2025 Nathan Kipkemboi</span>
-    <span>Software Test Automation Engineer</span>
+
+    <span>
+      © 2026 Nathan Kipkemboi
+    </span>
+
+    <span>
+      QA Automation · Software · IT Systems
+    </span>
+
   </footer>
 
+
   <script src="script.js"></script>
+
 </body>
 </html>
